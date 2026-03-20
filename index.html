@@ -1,0 +1,953 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="Inya — Automatizamos y organizamos los procesos de tu empresa con inteligencia artificial. Transforma tu operación con soluciones de IA empresarial." />
+  <meta name="keywords"
+    content="IA empresarial, automatización, inteligencia artificial, organización empresarial, procesos, Inya" />
+  <title>Inya — Organización Empresarial con IA</title>
+
+  <!-- Preconnect fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="styles.css" />
+
+  <!-- Favicon placeholder -->
+  <link rel="icon" href="images/logo.png" type="image/png" />
+</head>
+
+<body>
+
+  <!-- ============================================================
+       PARTICLES CONTAINER
+       ============================================================ -->
+  <div class="particles-container" id="particles" aria-hidden="true"></div>
+
+  <!-- ============================================================
+       NAVBAR
+       ============================================================ -->
+  <nav class="navbar" id="navbar" role="navigation" aria-label="Navegación principal">
+    <div class="container nav-inner">
+
+      <!-- Logo -->
+      <a href="#hero" class="nav-logo" aria-label="Inya inicio">
+        <img src="images/logo.png" alt="Inya logo" height="42" />
+        <span class="nav-logo-text">Inya<span>.</span></span>
+      </a>
+
+      <!-- Desktop links -->
+      <ul class="nav-links" role="list">
+        <li><a href="#servicios" class="nav-link">Servicios</a></li>
+        <li><a href="#resultados" class="nav-link">Resultados</a></li>
+        <li><a href="#proceso" class="nav-link">Proceso</a></li>
+        <li><a href="#testimonios" class="nav-link">Clientes</a></li>
+        <li><a href="#nosotros" class="nav-link">Nosotros</a></li>
+      </ul>
+
+      <button onclick="openModal()" class="nav-cta" id="nav-cta-btn">Consulta ahora →</button>
+
+      <!-- Hamburger -->
+      <button class="hamburger" id="hamburger" aria-label="Abrir menú" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+    </div>
+  </nav>
+
+  <!-- Mobile menu -->
+  <div class="mobile-menu" id="mobileMenu" role="dialog" aria-label="Menú móvil">
+    <a href="#servicios" class="nav-link" onclick="closeMobileMenu()">Servicios</a>
+    <a href="#resultados" class="nav-link" onclick="closeMobileMenu()">Resultados</a>
+    <a href="#proceso" class="nav-link" onclick="closeMobileMenu()">Proceso</a>
+    <a href="#testimonios" class="nav-link" onclick="closeMobileMenu()">Clientes</a>
+    <a href="#nosotros" class="nav-link" onclick="closeMobileMenu()">Nosotros</a>
+    <a href="#contacto" class="btn btn-primary btn-lg" onclick="closeMobileMenu()">Consulta ahora →</a>
+  </div>
+
+  <!-- ============================================================
+       HERO SECTION
+       ============================================================ -->
+  <section class="hero" id="hero" aria-label="Sección principal">
+    <div class="container">
+      <div class="hero-grid">
+
+        <!-- Left: copy -->
+        <div class="hero-content">
+
+          <!-- Badge -->
+          <div class="hero-badge">
+            <span class="hero-badge-icon">🤖</span>
+            <span class="hero-badge-dot"></span>
+            <span class="hero-badge-text">IA Enterprise · <strong>Next-gen Automation</strong></span>
+          </div>
+
+          <!-- Title -->
+          <h1 class="hero-title">
+            Organiza tu empresa<br />
+            con <span class="gradient-text">Inteligencia<br />Artificial</span>
+          </h1>
+
+          <!-- Subtitle -->
+          <p class="hero-subtitle">
+            Automatizamos procesos, centralizamos información y optimizamos
+            la operación de tu empresa con soluciones de IA diseñadas a medida.
+          </p>
+
+          <!-- CTAs -->
+          <div class="hero-cta-group">
+            <button onclick="openModal()" class="btn btn-primary btn-lg" id="hero-cta-main">
+              Consulta ahora →
+            </button>
+            <a href="#servicios" class="btn btn-outline btn-lg" id="hero-cta-sec">
+              Ver Servicios
+            </a>
+          </div>
+
+          <!-- Stats -->
+          <div class="hero-stats">
+            <div class="hero-stat">
+              <span class="hero-stat-value">
+                <span class="counter" data-target="200">0</span><span>+</span>
+              </span>
+              <span class="hero-stat-label">Procesos automatizados</span>
+            </div>
+            <div class="hero-stat">
+              <span class="hero-stat-value">
+                <span class="counter" data-target="85">0</span><span class="accent">%</span>
+              </span>
+              <span class="hero-stat-label">Reducción de tiempos</span>
+            </div>
+            <div class="hero-stat">
+              <span class="hero-stat-value">
+                <span class="counter" data-target="50">0</span><span>+</span>
+              </span>
+              <span class="hero-stat-label">Empresas transformadas</span>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Right: visual -->
+        <div class="hero-visual" aria-hidden="true">
+          <div class="orbit-ring">
+            <div class="orbit-dot"></div>
+          </div>
+          <img src="images/hero_visual.png" alt="Inya AI visualization" class="hero-img" width="540" height="540" />
+          <!-- Floating chips -->
+          <div class="hero-chip chip-1">
+            <span class="hero-chip-icon">⚡</span>
+            Automatización activa
+          </div>
+          <div class="hero-chip chip-2">
+            <span class="hero-chip-icon">🧠</span>
+            IA entrenada en tu negocio
+          </div>
+          <div class="hero-chip chip-3">
+            <span class="hero-chip-icon">📊</span>
+            Reportes en tiempo real
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       SOCIAL PROOF STRIP
+       ============================================================ -->
+  <section class="proof-strip" aria-label="Empresas que confían en Inya">
+    <div class="container">
+      <div class="proof-inner">
+        <p class="proof-label">Usado por equipos en</p>
+        <div class="proof-logos" role="list">
+          <div class="proof-logo-item" role="listitem">
+            <span class="logo-icon">🏦</span> FinGroup
+          </div>
+          <div class="proof-logo-item" role="listitem">
+            <span class="logo-icon">🏭</span> Manufact SA
+          </div>
+          <div class="proof-logo-item" role="listitem">
+            <span class="logo-icon">🛒</span> RetailMax
+          </div>
+          <div class="proof-logo-item" role="listitem">
+            <span class="logo-icon">🏥</span> HealthCore
+          </div>
+          <div class="proof-logo-item" role="listitem">
+            <span class="logo-icon">🚀</span> TechVentures
+          </div>
+          <div class="proof-logo-item" role="listitem">
+            <span class="logo-icon">⚙️</span> Industrias RH
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       SERVICES — Flip Cards
+       ============================================================ -->
+  <section class="services" id="servicios" aria-label="Nuestros servicios">
+    <div class="services-decor" aria-hidden="true"></div>
+    <div class="container">
+
+      <div class="section-header reveal">
+        <span class="section-label">Lo que hacemos</span>
+        <h2 class="section-title">Soluciones <span class="gradient-text">IA</span> para cada área</h2>
+        <p class="section-subtitle">
+          Desde la automatización de tareas repetitivas hasta la digitalización completa
+          de tus procesos. Hover en cada tarjeta para explorar.
+        </p>
+      </div>
+
+      <div class="services-grid">
+
+        <!-- Service 1: Process Automation -->
+        <div class="flip-card reveal">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <img src="images/service_1.png" alt="Automatización de procesos" loading="lazy" />
+              <div class="flip-front-overlay">
+                <span class="flip-front-tag">01 — Core</span>
+                <h3 class="flip-front-title">Automatización de Procesos</h3>
+              </div>
+            </div>
+            <div class="flip-card-back">
+              <span class="flip-back-icon">⚙️</span>
+              <h3 class="flip-back-title">Automatización de Procesos</h3>
+              <p class="flip-back-desc">
+                Identificamos y automatizamos tareas repetitivas de tu operación,
+                liberando a tu equipo para trabajo de alto valor.
+              </p>
+              <div class="flip-tags">
+                <span class="flip-tag">RPA</span>
+                <span class="flip-tag">Flujos IA</span>
+                <span class="flip-tag">Bots</span>
+                <span class="flip-tag">API</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Service 2: Data Organization -->
+        <div class="flip-card reveal">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <img src="images/service_2.png" alt="Organización de información" loading="lazy" />
+              <div class="flip-front-overlay">
+                <span class="flip-front-tag">02 — Data</span>
+                <h3 class="flip-front-title">Organización de Información</h3>
+              </div>
+            </div>
+            <div class="flip-card-back">
+              <span class="flip-back-icon">📂</span>
+              <h3 class="flip-back-title">Organización de Información</h3>
+              <p class="flip-back-desc">
+                Estructuramos y centralizamos los datos dispersos de tu empresa en
+                sistemas inteligentes y accesibles para toda la organización.
+              </p>
+              <div class="flip-tags">
+                <span class="flip-tag">Bases de datos IA</span>
+                <span class="flip-tag">RAG</span>
+                <span class="flip-tag">Vector DB</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Service 3: Business Intelligence -->
+        <div class="flip-card reveal">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <img src="images/service_3.png" alt="Business Intelligence" loading="lazy" />
+              <div class="flip-front-overlay">
+                <span class="flip-front-tag">03 — Analytics</span>
+                <h3 class="flip-front-title">Business Intelligence</h3>
+              </div>
+            </div>
+            <div class="flip-card-back">
+              <span class="flip-back-icon">📊</span>
+              <h3 class="flip-back-title">Business Intelligence</h3>
+              <p class="flip-back-desc">
+                Dashboards personalizados con métricas en tiempo real y análisis
+                predictivo para decisiones empresariales más precisas.
+              </p>
+              <div class="flip-tags">
+                <span class="flip-tag">Dashboards</span>
+                <span class="flip-tag">Predictivo</span>
+                <span class="flip-tag">KPIs</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Service 4: Workflow Optimization -->
+        <div class="flip-card reveal">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <img src="images/service_4.png" alt="Optimización de flujos" loading="lazy" />
+              <div class="flip-front-overlay">
+                <span class="flip-front-tag">04 — Optimize</span>
+                <h3 class="flip-front-title">Optimización de Flujos</h3>
+              </div>
+            </div>
+            <div class="flip-card-back">
+              <span class="flip-back-icon">🔄</span>
+              <h3 class="flip-back-title">Optimización de Flujos</h3>
+              <p class="flip-back-desc">
+                Mapeamos, rediseñamos y optimizamos los flujos de trabajo de tu empresa.
+                Menos cuellos de botella, más velocidad operacional.
+              </p>
+              <div class="flip-tags">
+                <span class="flip-tag">BPM</span>
+                <span class="flip-tag">Lean IA</span>
+                <span class="flip-tag">Workflows</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Service 5: AI Integration (CSS visual) -->
+        <div class="flip-card reveal">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <div class="service-visual-css">
+                <span class="svc-icon">🔗</span>
+              </div>
+              <div class="flip-front-overlay">
+                <span class="flip-front-tag">05 — Integration</span>
+                <h3 class="flip-front-title">Integración IA Empresarial</h3>
+              </div>
+            </div>
+            <div class="flip-card-back">
+              <span class="flip-back-icon">🔗</span>
+              <h3 class="flip-back-title">Integración IA Empresarial</h3>
+              <p class="flip-back-desc">
+                Conectamos tus sistemas actuales (ERP, CRM, contabilidad) con
+                módulos de inteligencia artificial sin necesidad de migrar.
+              </p>
+              <div class="flip-tags">
+                <span class="flip-tag">ERP/CRM</span>
+                <span class="flip-tag">Webhooks</span>
+                <span class="flip-tag">n8n</span>
+                <span class="flip-tag">Zapier</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Service 6: Smart Analytics (CSS visual) -->
+        <div class="flip-card reveal">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <div class="service-visual-css">
+                <span class="svc-icon">🧠</span>
+              </div>
+              <div class="flip-front-overlay">
+                <span class="flip-front-tag">06 — Intelligence</span>
+                <h3 class="flip-front-title">Analítica Inteligente</h3>
+              </div>
+            </div>
+            <div class="flip-card-back">
+              <span class="flip-back-icon">🧠</span>
+              <h3 class="flip-back-title">Analítica Inteligente</h3>
+              <p class="flip-back-desc">
+                Modelos de lenguaje y visión artificial entrenados sobre tus propios
+                datos para generar insights y automatizar decisiones complejas.
+              </p>
+              <div class="flip-tags">
+                <span class="flip-tag">LLMs</span>
+                <span class="flip-tag">Fine-tuning</span>
+                <span class="flip-tag">NLP</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       STATS / DASHBOARD SECTION
+       ============================================================ -->
+  <section class="stats-section" id="resultados" aria-label="Resultados y métricas">
+    <div class="container">
+      <div class="stats-grid">
+
+        <!-- Left copy -->
+        <div class="stats-left">
+          <span class="section-label reveal">Resultados reales</span>
+          <h2 class="section-title reveal">
+            Números que<br /><span class="gradient-text">hablan solos</span>
+          </h2>
+          <p class="section-subtitle reveal">
+            Nuestros clientes ven resultados medibles desde las primeras semanas
+            de implementación. La IA no es el futuro — es el presente de tu empresa.
+          </p>
+
+          <div class="stats-numbers">
+            <div class="stat-box reveal">
+              <span class="stat-box-value">
+                <span class="counter" data-target="85">0</span>
+                <span class="accent">%</span>
+              </span>
+              <span class="stat-box-label">Reducción de tareas manuales</span>
+            </div>
+            <div class="stat-box reveal">
+              <span class="stat-box-value">
+                <span class="counter" data-target="3">0</span>
+                <span class="accent">x</span>
+              </span>
+              <span class="stat-box-label">Velocidad operacional</span>
+            </div>
+            <div class="stat-box reveal">
+              <span class="stat-box-value">
+                <span class="counter" data-target="99">0</span>
+                <span class="accent">%</span>
+              </span>
+              <span class="stat-box-label">Uptime de sistemas IA</span>
+            </div>
+            <div class="stat-box reveal">
+              <span class="stat-box-value">
+                <span class="counter" data-target="40">0</span>
+                <span class="accent">%</span>
+              </span>
+              <span class="stat-box-label">Reducción de costos operativos</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Dashboard mockup -->
+        <div class="dashboard-mockup reveal" aria-label="Dashboard de ejemplo">
+          <div class="dash-header">
+            <div class="dash-dot"></div>
+            <div class="dash-dot"></div>
+            <div class="dash-dot"></div>
+            <span class="dash-title">inya_dashboard.ai — Panel de Control</span>
+          </div>
+          <div class="dash-body">
+
+            <div class="dash-row">
+              <div class="dash-metric">
+                <span class="dash-metric-v">847</span>
+                <span class="dash-metric-l">Tareas automatizadas hoy</span>
+              </div>
+              <div class="dash-metric">
+                <span class="dash-metric-v">98.4%</span>
+                <span class="dash-metric-l">Precisión IA</span>
+              </div>
+              <div class="dash-metric">
+                <span class="dash-metric-v">12.3h</span>
+                <span class="dash-metric-l">Horas ahorradas</span>
+              </div>
+            </div>
+
+            <!-- Bar chart -->
+            <div class="dash-chart" aria-label="Gráfico de actividad semanal">
+              <div class="chart-bar" style="height:45%"></div>
+              <div class="chart-bar" style="height:65%"></div>
+              <div class="chart-bar" style="height:50%"></div>
+              <div class="chart-bar" style="height:80%"></div>
+              <div class="chart-bar" style="height:70%"></div>
+              <div class="chart-bar" style="height:95%"></div>
+              <div class="chart-bar" style="height:88%"></div>
+              <div class="chart-bar" style="height:75%"></div>
+              <div class="chart-bar" style="height:90%"></div>
+              <div class="chart-bar" style="height:68%"></div>
+              <div class="chart-bar" style="height:85%"></div>
+              <div class="chart-bar" style="height:100%"></div>
+            </div>
+
+            <!-- Table -->
+            <div class="dash-table">
+              <div class="dash-table-row header">
+                <span>Módulo IA</span>
+                <span>Actividad</span>
+                <span>Estado</span>
+              </div>
+              <div class="dash-table-row">
+                <span>📄 Doc Processor</span>
+                <span>1,204 docs/día</span>
+                <span class="status ok">● Activo</span>
+              </div>
+              <div class="dash-table-row">
+                <span>📧 Email Router</span>
+                <span>348 emails/h</span>
+                <span class="status ok">● Activo</span>
+              </div>
+              <div class="dash-table-row">
+                <span>📊 BI Report Bot</span>
+                <span>Reportes 24/7</span>
+                <span class="status ok">● Activo</span>
+              </div>
+              <div class="dash-table-row">
+                <span>🔗 CRM Sync</span>
+                <span>Actualización en vivo</span>
+                <span class="status warn">● Sync</span>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       PROCESS — How It Works
+       ============================================================ -->
+  <section class="process-section" id="proceso" aria-label="Nuestro proceso">
+    <div class="container">
+
+      <div class="section-header reveal">
+        <span class="section-label">Metodología</span>
+        <h2 class="section-title">Tu empresa automatizada<br /><span class="gradient-text">en 4 pasos</span></h2>
+        <p class="section-subtitle">
+          Un proceso probado y sin fricciones para que empieces a ver resultados
+          desde la primera semana.
+        </p>
+      </div>
+
+      <div class="process-steps">
+
+        <div class="process-step reveal">
+          <div class="step-number">01</div>
+          <h3 class="step-title">Diagnóstico IA</h3>
+          <p class="step-desc">
+            Analizamos tus procesos actuales, identificamos oportunidades de
+            automatización y diseñamos el roadmap personalizado.
+          </p>
+        </div>
+
+        <div class="process-step reveal">
+          <div class="step-number">02</div>
+          <h3 class="step-title">Diseño del Sistema</h3>
+          <p class="step-desc">
+            Construimos la arquitectura de IA adaptada a tu empresa: flujos,
+            integraciones y modelos entrenados con tus datos.
+          </p>
+        </div>
+
+        <div class="process-step reveal">
+          <div class="step-number">03</div>
+          <h3 class="step-title">Implementación</h3>
+          <p class="step-desc">
+            Desplegamos los sistemas en producción de forma gradual y segura,
+            capacitando a tu equipo en cada etapa.
+          </p>
+        </div>
+
+        <div class="process-step reveal">
+          <div class="step-number">04</div>
+          <h3 class="step-title">Mejora Continua</h3>
+          <p class="step-desc">
+            Monitoreamos y optimizamos los sistemas continuamente. La IA mejora
+            sola con cada proceso que completa.
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ============================================================
+       TESTIMONIALS
+       ============================================================ -->
+  <section class="testimonials" id="testimonios" aria-label="Testimonios de clientes">
+    <div class="container">
+
+      <div class="section-header reveal">
+        <span class="section-label">Clientes</span>
+        <h2 class="section-title">Lo que dicen nuestros<br /><span class="gradient-text">clientes</span></h2>
+      </div>
+
+      <div class="testimonials-grid">
+
+        <div class="testimonial-card reveal">
+          <div class="testimonial-stars">
+            <span class="star">★</span><span class="star">★</span>
+            <span class="star">★</span><span class="star">★</span><span class="star">★</span>
+          </div>
+          <p class="testimonial-text">
+            "Inya transformó completamente nuestra operación. Lo que antes nos tomaba
+            3 días de trabajo manual ahora sucede automáticamente en minutos.
+            El ROI fue visible desde la primera semana."
+          </p>
+          <div class="testimonial-author">
+            <div class="author-avatar" aria-hidden="true">MR</div>
+            <div>
+              <span class="author-name">Miguel Rodríguez</span>
+              <span class="author-role">Director de Operaciones · Manufact SA</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card reveal">
+          <div class="testimonial-stars">
+            <span class="star">★</span><span class="star">★</span>
+            <span class="star">★</span><span class="star">★</span><span class="star">★</span>
+          </div>
+          <p class="testimonial-text">
+            "La organización de nuestra información era un caos. Inya implementó
+            un sistema de IA que centraliza todo en tiempo real. Ahora el equipo
+            tarda segundos en encontrar cualquier dato."
+          </p>
+          <div class="testimonial-author">
+            <div class="author-avatar" aria-hidden="true">LG</div>
+            <div>
+              <span class="author-name">Laura Gómez</span>
+              <span class="author-role">CEO · RetailMax</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card reveal">
+          <div class="testimonial-stars">
+            <span class="star">★</span><span class="star">★</span>
+            <span class="star">★</span><span class="star">★</span><span class="star">★</span>
+          </div>
+          <p class="testimonial-text">
+            "El dashboard de BI que construyeron para nosotros cambió cómo tomamos
+            decisiones. Datos en tiempo real, predicciones precisas, y todo
+            integrado con nuestro ERP existente sin migraciones."
+          </p>
+          <div class="testimonial-author">
+            <div class="author-avatar" aria-hidden="true">AC</div>
+            <div>
+              <span class="author-name">Andrés Castillo</span>
+              <span class="author-role">CFO · FinGroup</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ============================================================
+       ABOUT / NOSOTROS
+       ============================================================ -->
+  <section class="about" id="nosotros" aria-label="Sobre Inya">
+    <div class="container">
+      <div class="about-grid">
+
+        <!-- Visual -->
+        <div class="about-visual" aria-hidden="true">
+          <div class="about-ring"></div>
+          <div class="about-circle">🤖</div>
+        </div>
+
+        <!-- Content -->
+        <div class="about-content">
+          <span class="section-label reveal">Quiénes somos</span>
+          <h2 class="section-title reveal">
+            IA diseñada para<br /><span class="gradient-text">empresas reales</span>
+          </h2>
+          <p class="section-subtitle reveal">
+            Inya nació de la convicción de que la inteligencia artificial debe ser
+            accesible y práctica para toda empresa, sin importar su tamaño o sector.
+          </p>
+
+          <div class="about-features reveal">
+            <div class="about-feature">
+              <span class="about-feature-icon">🎯</span>
+              <div>
+                <span class="about-feature-title">Especialistas en IA Empresarial</span>
+                <span class="about-feature-text">
+                  No vendemos software genérico. Diseñamos y construimos soluciones
+                  de IA específicas para los procesos únicos de tu empresa.
+                </span>
+              </div>
+            </div>
+            <div class="about-feature">
+              <span class="about-feature-icon">⚡</span>
+              <div>
+                <span class="about-feature-title">Implementación Rápida</span>
+                <span class="about-feature-text">
+                  Nuestro método ágil permite tener automatizaciones funcionales
+                  en producción en menos de 2 semanas.
+                </span>
+              </div>
+            </div>
+            <div class="about-feature">
+              <span class="about-feature-icon">🔐</span>
+              <div>
+                <span class="about-feature-title">Seguridad y Privacidad</span>
+                <span class="about-feature-text">
+                  Tus datos son tuyos. Cumplimos con estándares de seguridad
+                  empresarial y tus datos nunca salen de tu entorno.
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <button onclick="openModal()" class="btn btn-primary reveal" id="about-cta">
+            Hablar con un experto →
+          </button>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       CTA FINAL
+       ============================================================ -->
+  <section class="cta-final" id="contacto" aria-label="Sección de contacto">
+    <div class="container">
+      <span class="section-label reveal" style="justify-content:center">
+        Da el primer paso
+      </span>
+      <h2 class="cta-final-title reveal">
+        ¿Listo para automatizar<br />
+        <span class="gradient-text">tu empresa con IA?</span>
+      </h2>
+      <p class="cta-final-sub reveal">
+        Agenda una demo gratuita de 30 minutos y te mostramos exactamente
+        cómo Inya puede transformar tu operación.
+      </p>
+      <div class="btn-group reveal">
+        <button onclick="openModal()" class="btn btn-primary btn-lg animate-pulse-glow" id="cta-main-btn">
+          📅 Consulta ahora
+        </button>
+        <a href="https://wa.me/+351930946625" class="btn btn-outline btn-lg" id="cta-whatsapp">
+          💬 WhatsApp
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       FOOTER
+       ============================================================ -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-main">
+
+        <!-- Brand -->
+        <div class="footer-brand">
+          <a href="#hero" class="nav-logo" aria-label="Inya inicio">
+            <img src="images/logo.png" alt="Inya" height="36" />
+            <span class="nav-logo-text">Inya<span>.</span></span>
+          </a>
+          <p>
+            Automatizamos y organizamos la información de tu empresa con
+            inteligencia artificial. Tu operación, reinventada.
+          </p>
+          <nav class="social-links" aria-label="Redes sociales">
+            <a href="#" class="social-link" aria-label="LinkedIn">in</a>
+            <a href="#" class="social-link" aria-label="Twitter/X">𝕏</a>
+            <a href="#" class="social-link" aria-label="Instagram">📷</a>
+            <a href="#" class="social-link" aria-label="YouTube">▶</a>
+          </nav>
+        </div>
+
+        <!-- Services -->
+        <div class="footer-col">
+          <h4>Servicios</h4>
+          <ul>
+            <li><a href="#servicios">Automatización de Procesos</a></li>
+            <li><a href="#servicios">Organización con IA</a></li>
+            <li><a href="#servicios">Business Intelligence</a></li>
+            <li><a href="#servicios">Optimización de Flujos</a></li>
+            <li><a href="#servicios">Integración IA</a></li>
+          </ul>
+        </div>
+
+        <!-- Company -->
+        <div class="footer-col">
+          <h4>Empresa</h4>
+          <ul>
+            <li><a href="#nosotros">Sobre Inya</a></li>
+            <li><a href="#proceso">Metodología</a></li>
+            <li><a href="#testimonios">Clientes</a></li>
+            <li><a href="#resultados">Resultados</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+          </ul>
+        </div>
+
+        <!-- Contact -->
+        <div class="footer-col">
+          <h4>Contacto</h4>
+          <ul>
+            <li><a href="mailto:hola@inya.ai">hola@inya.ai</a></li>
+            <li><a href="https://wa.me/1234567890">WhatsApp</a></li>
+            <li><a href="#contacto">Consulta ahora</a></li>
+          </ul>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+        <p>© 2026 <span>Inya</span>. Todos los derechos reservados.</p>
+        <nav class="footer-legal" aria-label="Legal">
+          <a href="#">Privacidad</a>
+          <a href="#">Términos</a>
+          <a href="#">Cookies</a>
+        </nav>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- ============================================================
+       CONTACT FORM MODAL
+       ============================================================ -->
+  <div class="modal-overlay" id="contactModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <div class="modal-box">
+
+      <!-- Close button -->
+      <button class="modal-close" id="modalClose" aria-label="Cerrar formulario" onclick="closeModal()">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round">
+          <line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/>
+        </svg>
+      </button>
+
+      <!-- Header -->
+      <div class="modal-header">
+        <div class="modal-icon">📅</div>
+        <h2 class="modal-title" id="modalTitle">Consulta ahora</h2>
+        <p class="modal-subtitle">Completa el formulario y te contactamos en menos de 24h.</p>
+      </div>
+
+      <!-- Form -->
+      <form class="modal-form" id="contactForm" novalidate>
+
+        <!-- Nombre -->
+        <div class="form-group">
+          <label for="fieldName" class="form-label">Nombre completo <span class="required">*</span></label>
+          <div class="input-wrapper">
+            <span class="input-icon">👤</span>
+            <input
+              type="text"
+              id="fieldName"
+              name="name"
+              class="form-input"
+              placeholder="Tu nombre"
+              autocomplete="name"
+              required
+            />
+          </div>
+          <span class="form-error" id="errorName"></span>
+        </div>
+
+        <!-- Empresa -->
+        <div class="form-group">
+          <label for="fieldCompany" class="form-label">Nombre de tu empresa <span class="required">*</span></label>
+          <div class="input-wrapper">
+            <span class="input-icon">🏢</span>
+            <input
+              type="text"
+              id="fieldCompany"
+              name="company"
+              class="form-input"
+              placeholder="Tu empresa"
+              autocomplete="organization"
+              required
+            />
+          </div>
+          <span class="form-error" id="errorCompany"></span>
+        </div>
+
+        <!-- Teléfono -->
+        <div class="form-group">
+          <label for="fieldPhone" class="form-label">Número de teléfono <span class="required">*</span></label>
+          <div class="input-wrapper">
+            <span class="input-icon">📞</span>
+            <input
+              type="tel"
+              id="fieldPhone"
+              name="phone"
+              class="form-input"
+              placeholder="+34 600 000 000"
+              autocomplete="tel"
+              required
+            />
+          </div>
+          <span class="form-error" id="errorPhone"></span>
+        </div>
+
+        <!-- Correo -->
+        <div class="form-group">
+          <label for="fieldEmail" class="form-label">Correo electrónico <span class="required">*</span></label>
+          <div class="input-wrapper">
+            <span class="input-icon">✉️</span>
+            <input
+              type="email"
+              id="fieldEmail"
+              name="email"
+              class="form-input"
+              placeholder="tu@empresa.com"
+              autocomplete="email"
+              required
+            />
+          </div>
+          <span class="form-error" id="errorEmail"></span>
+        </div>
+
+        <!-- Mensaje -->
+        <div class="form-group">
+          <label for="fieldMessage" class="form-label">Mensaje <span class="required">*</span></label>
+          <div class="input-wrapper textarea-wrapper">
+            <span class="input-icon textarea-icon">💬</span>
+            <textarea
+              id="fieldMessage"
+              name="message"
+              class="form-input form-textarea"
+              placeholder="Cuéntanos sobre tu empresa y qué procesos te gustaría automatizar..."
+              rows="4"
+              required
+            ></textarea>
+          </div>
+          <span class="form-error" id="errorMessage"></span>
+        </div>
+
+        <!-- Terms -->
+        <div class="form-group form-check">
+          <label class="checkbox-label" for="fieldTerms">
+            <input type="checkbox" id="fieldTerms" name="terms" class="checkbox-input" required />
+            <span class="checkbox-custom"></span>
+            <span class="checkbox-text">
+              Acepto los <a href="#" class="terms-link">Términos y Condiciones</a>
+              y la <a href="#" class="terms-link">Política de Privacidad</a> de Inya.
+            </span>
+          </label>
+          <span class="form-error" id="errorTerms"></span>
+        </div>
+
+        <!-- Submit -->
+        <button type="submit" class="btn btn-primary btn-full" id="formSubmitBtn">
+          <span class="btn-text">Enviar solicitud →</span>
+          <span class="btn-loading" style="display:none">⏳ Enviando...</span>
+        </button>
+
+      </form>
+
+      <!-- Success state -->
+      <div class="modal-success" id="modalSuccess" style="display:none">
+        <div class="success-icon">✅</div>
+        <h3 class="success-title">¡Solicitud enviada!</h3>
+        <p class="success-text">
+          Hemos recibido tu solicitud. Te contactaremos en menos de 24 horas
+          al correo y teléfono proporcionados.
+        </p>
+        <button onclick="closeModal()" class="btn btn-outline" style="margin-top:24px">
+          Cerrar
+        </button>
+      </div>
+
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
